@@ -154,6 +154,7 @@ ul.infoText li:before{
 }
 
 @media (max-width: 1024px) {
+    .mobilMenu .userArea{display: none;}
     .mobilMenu {
         display: none;
         font-family: FordAntenna-Medium;
@@ -164,7 +165,7 @@ ul.infoText li:before{
         -webkit-transform: translate3d(-100%,0,0);
         transform: translate3d(-100%,0,0);
         position: fixed;
-        top: 130px;
+        top: 95px;
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
         -webkit-transition: none;
@@ -222,8 +223,25 @@ ul.infoText li:before{
     .mobilMenu .submenu li a span{margin-right: 5px;}
     .mobilMenu .submenu.langMenu li a span{margin-right: 0px;}
     .mobilMenu .submenu.langMenu li a .icon-icon-lang-turkish,.mobilMenu .submenu.langMenu li a .icon-icon-lang-english,.mobilMenu .submenu.langMenu li a .icon-icon-lang-francais,.mobilMenu .submenu.langMenu li a .icon-icon-lang-deutsch,.mobilMenu .submenu.langMenu li a .icon-icon-lang-russian{margin-right: 5px;}
+    ul.notif li.natificationSubMenu div.natificationList{right: -43px;}
+    ul.notif li.natificationSubMenu div.natificationList:before{right: 14%;}
+    ul.nav{display: none;}
+    .topMenuNavArea{display: none !important;}
+    .topMenuNatficationArea{flex: 0 0 75%;max-width: 75%;}
 }
-@media (max-width: 400px) {
+@media (max-width: 812px) {
+    .mobilMenu .userArea{display: block;}
+    .mobilMenu .userInfoArea{margin-left: 2px;}
+    .mobilMenu{top: 70px;}
+    .topMenuNatficationArea .userArea{display: none;}
+}
+@media (max-width: 736px) {
+    .mobilMenu .userInfoArea{margin-left: 10px;}
+    .mobilMenu {
+        top: 50px;
+    }
+}
+@media (max-width: 576px) {
     .mobilMenu {
         display: none;
         font-family: FordAntenna-Medium;
@@ -250,5 +268,24 @@ ul.infoText li:before{
         overflow-y: auto!important;
         z-index: 20;
         padding: 15px;
+    }
+}
+@media (max-width: 568px) {
+    .topMenuNatficationArea{
+        flex: 0 0 58.333333%;
+        max-width: 58.333333%;
+    }
+    .mobilMenu {
+        top: 95px;
+    }
+}
+@media (max-width: 414px) {
+    .mobilMenu {
+        top: 65px;
+    }
+}
+@media (max-width: 375px) {
+    .mobilMenu {
+        top: 50px;
     }
 }

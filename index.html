@@ -15,7 +15,7 @@
 				<div class="col-5 col-sm-12 col-md-3 col-lg-3 logoArea">
 					<img src="img/ford-gelisim-akademi-logo.png" class="img-fluid" alt="Ford Gelişim Akademi" style="margin-bottom: -4%;"/>
 				</div>
-				<div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 d-none d-md-block d-lg-block">
+				<div class="col-xs-12 col-sm-12 col-md-5 topMenuNavArea col-lg-5 d-none d-md-block d-lg-block">
 					<ul class="nav">
 						<li>
 							<a href="#">Şirket Bilgileri</a>
@@ -124,7 +124,7 @@
 						</li>
 					</ul>
 				</div>
-				<div class="col-7 col-sm-7 col-md-4 col-lg-4">
+				<div class="col-7 col-sm-7 col-md-4 col-lg-4 topMenuNatficationArea">
 					<ul class="notif">
 						<li><a href="#"><span class="icon-icon-guide"></span></a></li>
 						<li class="natificationSubMenu">
@@ -505,7 +505,7 @@
 	<section class="infoArea">
 		<div class="container">
 			<div class="row">
-				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-3">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-3 dashboardWidgetArea">
 					<div class="row d-none d-sm-none d-md-flex d-lg-flex">
 						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mt-4">
 							<div class="bayiToplamCalisan">
@@ -742,18 +742,30 @@
 					        </div>
 						</div>
 						<div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 tableCategoryArea">
-							<select class="form-control" id="tableCategory">
-						      <option>Kayıtlı Eğitimler</option>
-						      <option>Onay Bekleyen Eğitimler</option>
-						      <option>Tamamlanması Gereken Eğitimler</option>
+							<!--
+							<select class="form-control" id="tableCategory" onchange="showTable()">
+						      <option value="0">Kayıtlı Eğitimler</option>
+						      <option value="1">Tamamlanması Gereken Eğitimler</option>
 						    </select>
 							<span class="icon-icon-table-dropdown"></span>
+							-->
+							<div class="custom-select-wrapper" id="TableCategory">
+								<div class="custom-select">
+									<div class="custom-select__trigger"><span>Kayıtlı Eğitimler</span>
+										<span class="icon-icon-table-dropdown"></span>
+									</div>
+									<div class="custom-options">
+										<span class="custom-option personalTableType selected" data-value="0">Kayıtlı Eğitimler</span>
+										<span class="custom-option personalTableType" data-value="1">Tamamlanması Gereken Eğitimler</span>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="row pb-3">
-				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="kayitliEgitimler" style="display: block;">
 					<table class="table display responsive" id="dataTablePersonel">
 						<thead>
 							<tr>
@@ -813,7 +825,7 @@
 								<td><div class="durumDevam">Devam</div></td>
 								<td>04.09.2019</td>
 								<td>04.09.2019</td>
-								<td><span class="icon-icon-play"></span></td>
+								<td><a href="#"><span class="icon-icon-play"></span></a></td>
 							</tr>
 							<tr>
 								<td><span class="icon-icon-table-online"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></span></td>
@@ -822,7 +834,7 @@
 								<td>52<sup>DK</sup></td>
 								<td><div id="durumChart_5" data-percent="0"></div></td>
 								<td><div class="durumCanli">Canlı</div></td>
-								<td><div id="startDate_1" data-countdown="30.12.2019">30.12.2019</div></td>
+								<td><div id="startDate_1" data-countdown="31.12.2019">31.12.2019</div></td>
 								<td>04.09.2019</td>
 								<td class="time"><div id="countdown_1"></div></td>
 							</tr>
@@ -847,7 +859,7 @@
 								<td></td>
 								<td>04.09.2019</td>
 								<td>04.09.2019</td>
-								<td></td>
+								<td><a href="#"><span class="icon-icon-play"></span></a></td>
 							</tr>
 							<tr class="grupEgitim_1 spanHide" style="display: none;">
 								<td><span class="icon-icon-training-web"></span></td>
@@ -858,7 +870,7 @@
 								<td></td>
 								<td>04.09.2019</td>
 								<td>04.09.2019</td>
-								<td></td>
+								<td><a href="#"><span class="icon-icon-play"></span></a></td>
 							</tr>
 							<tr class="grupEgitim_1 spanHide" style="display: none;">
 								<td><span class="icon-icon-training-web"></span></td>
@@ -869,7 +881,7 @@
 								<td></td>
 								<td>04.09.2019</td>
 								<td>04.09.2019</td>
-								<td></td>
+								<td><a href="#"><span class="icon-icon-play"></span></a></td>
 							</tr>
 							<tr class="grupEgitim_1 spanHide" style="display: none;">
 								<td><span class="icon-icon-training-web"></span></td>
@@ -880,7 +892,7 @@
 								<td></td>
 								<td>04.09.2019</td>
 								<td>04.09.2019</td>
-								<td></td>
+								<td><a href="#"><span class="icon-icon-play"></span></a></td>
 							</tr>
 							<tr>
 								<td><span class="icon-icon-training-class"></span></td>
@@ -902,7 +914,7 @@
 								<td><div class="durumDevam">Devam</div></td>
 								<td>04.09.2019</td>
 								<td>04.09.2019</td>
-								<td><span class="icon-icon-play"></span></td>
+								<td><a href="#"><span class="icon-icon-play"></span></a></td>
 							</tr>
 							<tr>
 								<td><span class="icon-icon-training-class"></span></td>
@@ -913,7 +925,7 @@
 								<td><div class="durumDevam">Devam</div></td>
 								<td>04.09.2019</td>
 								<td>04.09.2019</td>
-								<td><span class="icon-icon-play"></span></td>
+								<td><a href="#"><span class="icon-icon-play"></span></a></td>
 							</tr>
 							<tr>
 								<td><span class="icon-icon-training-web"></span></td>
@@ -924,7 +936,7 @@
 								<td><div class="durumBasarili">Başarılı</div></td>
 								<td>04.09.2019</td>
 								<td>04.09.2019</td>
-								<td><span class="icon-icon-play"></span></td>
+								<td><a href="#"><span class="icon-icon-play"></span></a></td>
 							</tr>
 							<tr>
 								<td><span class="icon-icon-training-class"></span></td>
@@ -935,7 +947,7 @@
 								<td><div class="durumBasarisiz">Başarısız</div></td>
 								<td>04.09.2019</td>
 								<td>04.09.2019</td>
-								<td><span class="icon-icon-play"></span></td>
+								<td><a href="#"><span class="icon-icon-play"></span></a></td>
 							</tr>
 							<tr>
 								<td><span class="icon-icon-training-web"></span></td>
@@ -948,7 +960,7 @@
 								<td><div class="durumDevam">Devam</div></td>
 								<td>04.09.2019</td>
 								<td>04.09.2019</td>
-								<td><span class="icon-icon-play"></span></td>
+								<td><a href="#"><span class="icon-icon-play"></span></a></td>
 							</tr>
 							<tr>
 								<td><span class="icon-icon-training-class"></span></td>
@@ -959,7 +971,7 @@
 								<td><div class="durumDevam">Devam</div></td>
 								<td>04.09.2019</td>
 								<td>04.09.2019</td>
-								<td><span class="icon-icon-play"></span></td>
+								<td><a href="#"><span class="icon-icon-play"></span></a></td>
 							</tr>
 							<tr>
 								<td><span class="icon-icon-training-web"></span></td>
@@ -970,7 +982,7 @@
 								<td><div class="durumBasarili">Başarılı</div></td>
 								<td>04.09.2019</td>
 								<td>04.09.2019</td>
-								<td><span class="icon-icon-play"></span></td>
+								<td><a href="#"><span class="icon-icon-play"></span></a></td>
 							</tr>
 							<tr>
 								<td><span class="icon-icon-training-web"></span></td>
@@ -981,7 +993,7 @@
 								<td><div class="durumBasarisiz">Başarısız</div></td>
 								<td>04.09.2019</td>
 								<td>04.09.2019</td>
-								<td><span class="icon-icon-play"></span></td>
+								<td><a href="#"><span class="icon-icon-play"></span></a></td>
 							</tr>
 							<tr>
 								<td><span class="icon-icon-training-class"></span></td>
@@ -994,8 +1006,245 @@
 								<td><div class="durumDevam">Devam</div></td>
 								<td>04.09.2019</td>
 								<td>04.09.2019</td>
-								<td><span class="icon-icon-play"></span></td>
+								<td><a href="#"><span class="icon-icon-play"></span></a></td>
 							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="tamamlanmasiGerekenEgitimler" style="display: none;">
+					<table class="table display responsive tgE" id="dataTablePersonel2">
+						<thead>
+						<tr>
+							<th class="all"><div class="tableTitle">Tür</div></th>
+							<th class="min-phone-l"><div class="tableTitle">Eğitim Adı</div></th>
+							<th class="desktop"><div class="tableTitle">Yer</div></th>
+							<th class="desktop"><div class="tableTitle">Kontenjan</div></th>
+							<th class="desktop"><div class="tableTitle">Süre</div></th>
+							<th class="desktop"><div class="tableTitle">Başlangıç</div></th>
+							<th class="desktop"><div class="tableTitle">Bitiş</div></th>
+							<th class="desktop"><div class="tableTitle">Talep</div></th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<td><span class="icon-icon-training-web"></span></td>
+							<td>FT Elektrik ve Elektronik - Temel Seviye E-Öğrenmesi 1</td>
+							<td>Online Eğitim</td>
+							<td>8/14</td>
+							<td>52<sup>DK</sup></td>
+							<td>04.09.2019</td>
+							<td>04.09.2019</td>
+							<td><a href="#" class="talepEtBtn">Talep Et <span class="icon-icon-table-request"></span></a></td>
+						</tr>
+						<tr>
+							<td><span class="icon-icon-training-web"></span></td>
+							<td>FT Elektrik ve Elektronik - Temel Seviye E-Öğrenmesi 1</td>
+							<td>Online Eğitim</td>
+							<td></td>
+							<td>52<sup>DK</sup></td>
+							<td>Zaman Planı Yok</td>
+							<td></td>
+							<td><a href="#" class="planlaBtn">Planla <span class="icon-icon-table-plan"></span></td>
+						</tr>
+						<tr>
+							<td><span class="icon-icon-training-class"></span></td>
+							<td>FT Elektrik ve Elektronik - Sınıf E-Öğrenmesi 1</td>
+							<td>Otosan Eğitim Merkezi</td>
+							<td>7/14</td>
+							<td>52<sup>DK</sup></td>
+							<td>
+								<select>
+									<option>04.09.2019</option>
+									<option>07.09.2019</option>
+									<option>13.09.2019</option>
+								</select>
+							</td>
+							<td>04.09.2019</td>
+							<td><a href="#" class="talepEtBtn">Talep Et <span class="icon-icon-table-request"></span></a></td>
+						</tr>
+						<tr>
+							<td><span class="icon-icon-training-web"></span></td>
+							<td>FT Elektrik ve Elektronik - Temel Uzun İsimli Bir Seviye
+								E-Öğrenmesi 1 Gereken Özellikler
+							</td>
+							<td>Online Eğitim</td>
+							<td>3/15</td>
+							<td>52<sup>DK</sup></td>
+							<td>04.09.2019</td>
+							<td>04.09.2019</td>
+							<td><a href="#" class="onaydaBtn">Onayda <span class="icon-icon-table-approve"></span></a></td>
+						</tr>
+						<tr>
+							<td><span class="icon-icon-table-online"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></span></td>
+							<td>FT Elektrik ve Elektronik - Temel Seviye E-Öğrenmesi 1</td>
+							<td>Online Canlı Eğitim</td>
+							<td>11/14</td>
+							<td>52<sup>DK</sup></td>
+							<td>04.09.2019</td>
+							<td>04.09.2019</td>
+							<td><a href="#" class="talepEtBtn">Talep Et <span class="icon-icon-table-request"></span></a></td>
+						</tr>
+						<tr class="grupEgitim" onclick="showGrup('1')">
+							<td><span class="icon-icon-training-class"></span></td>
+							<td>FT Elektrik ve Elektronik - Sınıf E-Öğrenmesi 1</td>
+							<td>Uzun isimli Merkez
+								Otosan Eğitim Merkezi</td>
+							<td>13/14</td>
+							<td>240<sup>DK</sup></td>
+							<td>
+								<select id="changeDate_1" onchange="changeDate(1)">
+									<option value="04.09.2019">04.09.2019</option>
+									<option value="07.09.2019">07.09.2019</option>
+									<option value="13.09.2019">13.09.2019</option>
+								</select>
+							</td>
+							<td>04.09.2019</td>
+							<td><a href="#" class="talepEtBtn">Talep Et <span class="icon-icon-table-request"></span></a></td>
+						</tr>
+						<tr class="grupEgitim_1 tgeGE_1 spanHide" style="display: none;">
+							<td><span class="icon-icon-training-web"></span></td>
+							<td>Grup Eğitim Eğitim Başlığı - 1. Gün	</td>
+							<td>Otosan Eğitim Merkezi</td>
+							<td></td>
+							<td>52<sup>DK</sup></td>
+							<td><div class="gebt">04.09.2019</div></td>
+							<td>04.09.2019</td>
+							<td></td>
+						</tr>
+						<tr class="grupEgitim_1 tgeGE_1 spanHide" style="display: none;">
+							<td><span class="icon-icon-training-web"></span></td>
+							<td>Grup Eğitim Eğitim Başlığı - 2. Gün</td>
+							<td>Otosan Eğitim Merkezi</td>
+							<td></td>
+							<td>52<sup>DK</sup></td>
+							<td><div class="gebt">04.09.2019</div></td>
+							<td>04.09.2019</td>
+							<td></td>
+						</tr>
+						<tr class="grupEgitim_1 tgeGE_1 spanHide" style="display: none;">
+							<td><span class="icon-icon-training-web"></span></td>
+							<td>Grup Eğitim Eğitim Başlığı - 3. Gün</td>
+							<td>Otosan Eğitim Merkezi</td>
+							<td></td>
+							<td>52<sup>DK</sup></td>
+							<td><div class="gebt">04.09.2019</div></td>
+							<td>04.09.2019</td>
+							<td></td>
+						</tr>
+						<tr class="grupEgitim_1 tgeGE_1 spanHide" style="display: none;">
+							<td><span class="icon-icon-training-web"></span></td>
+							<td>Grup Eğitim Eğitim Başlığı - 4. Gün</td>
+							<td>Otosan Eğitim Merkezi</td>
+							<td></td>
+							<td>52<sup>DK</sup></td>
+							<td><div class="gebt">04.09.2019</div></td>
+							<td>04.09.2019</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td><span class="icon-icon-training-class"></span></td>
+							<td>FT Elektrik ve Elektronik - Sınıf E-Öğrenmesi 7</td>
+							<td>Otosan Eğitim Merkezi</td>
+							<td>10/14</td>
+							<td>52<sup>DK</sup></td>
+							<td>04.09.2019</td>
+							<td>04.09.2019</td>
+							<td><a href="#" class="talepEtBtn">Talep Et <span class="icon-icon-table-request"></span></a></td>
+						</tr>
+						<tr>
+							<td><span class="icon-icon-table-online"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></span></td>
+							<td>FT Elektrik ve Elektronik - Temel Seviye E-Öğrenmesi 1</td>
+							<td>Online Eğitim</td>
+							<td>10/14</td>
+							<td>52<sup>DK</sup></td>
+							<td>04.09.2019</td>
+							<td>04.09.2019</td>
+							<td><a href="#" class="talepEtBtn">Talep Et <span class="icon-icon-table-request"></span></a></td>
+						</tr>
+						<tr>
+							<td><span class="icon-icon-training-class"></span></td>
+							<td>FT Elektrik ve Elektronik - Temel Seviye E-Öğrenmesi 1</td>
+							<td>Online Eğitim</td>
+							<td>10/14</td>
+							<td>52<sup>DK</sup></td>
+							<td>04.09.2019</td>
+							<td>04.09.2019</td>
+							<td><a href="#" class="talepEtBtn">Talep Et <span class="icon-icon-table-request"></span></a></td>
+						</tr>
+						<tr>
+							<td><span class="icon-icon-training-web"></span></td>
+							<td>FT Elektrik ve Elektronik - Temel Seviye E-Öğrenmesi 1</td>
+							<td>Online Eğitim</td>
+							<td>10/14</td>
+							<td>52<sup>DK</sup></td>
+							<td>04.09.2019</td>
+							<td>04.09.2019</td>
+							<td><a href="#" class="talepEtBtn">Talep Et <span class="icon-icon-table-request"></span></a></td>
+						</tr>
+						<tr>
+							<td><span class="icon-icon-training-class"></span></td>
+							<td>FT Elektrik ve Elektronik - Sınıf E-Öğrenmesi 1</td>
+							<td>Otosan Eğitim Merkezi</td>
+							<td>10/14</td>
+							<td>52<sup>DK</sup></td>
+							<td>04.09.2019</td>
+							<td>04.09.2019</td>
+							<td><a href="#" class="talepEtBtn">Talep Et <span class="icon-icon-table-request"></span></a></td>
+						</tr>
+						<tr>
+							<td><span class="icon-icon-training-web"></span></td>
+							<td>FT Elektrik ve Elektronik - Temel Uzun İsimli Bir Seviye
+								E-Öğrenmesi 1 Gereken Özellikler
+							</td>
+							<td>Online Eğitim</td>
+							<td>10/14</td>
+							<td>52<sup>DK</sup></td>
+							<td>04.09.2019</td>
+							<td>04.09.2019</td>
+							<td><a href="#" class="talepEtBtn">Talep Et <span class="icon-icon-table-request"></span></a></td>
+						</tr>
+						<tr>
+							<td><span class="icon-icon-training-class"></span></td>
+							<td>FT Elektrik ve Elektronik - Temel Seviye E-Öğrenmesi 1</td>
+							<td>Online Eğitim</td>
+							<td>10/14</td>
+							<td>52<sup>DK</sup></td>
+							<td>04.09.2019</td>
+							<td>04.09.2019</td>
+							<td><a href="#" class="talepEtBtn">Talep Et <span class="icon-icon-table-request"></span></a></td>
+						</tr>
+						<tr>
+							<td><span class="icon-icon-training-web"></span></td>
+							<td>FT Elektrik ve Elektronik - Temel Seviye E-Öğrenmesi 1</td>
+							<td>Online Eğitim</td>
+							<td>10/14</td>
+							<td>52<sup>DK</sup></td>
+							<td>04.09.2019</td>
+							<td>04.09.2019</td>
+							<td><a href="#" class="talepEtBtn">Talep Et <span class="icon-icon-table-request"></span></a></td>
+						</tr>
+						<tr>
+							<td><span class="icon-icon-training-web"></span></td>
+							<td>FT Elektrik ve Elektronik - Sınıf E-Öğrenmesi 1</td>
+							<td>Otosan Eğitim Merkezi</td>
+							<td>10/14</td>
+							<td>52<sup>DK</sup></td>
+							<td>04.09.2019</td>
+							<td>04.09.2019</td>
+							<td><a href="#" class="talepEtBtn">Talep Et <span class="icon-icon-table-request"></span></a></td>
+						</tr>
+						<tr>
+							<td><span class="icon-icon-training-class"></span></td>
+							<td>FT Elektrik ve Elektronik - Temel Uzun İsimli Bir Seviye
+								E-Öğrenmesi 1 Gereken Özellikler
+							</td>
+							<td>Online Eğitim</td>
+							<td>10/14</td>
+							<td>52<sup>DK</sup></td>
+							<td>04.09.2019</td>
+							<td>04.09.2019</td>
+							<td><a href="#" class="talepEtBtn">Talep Et <span class="icon-icon-table-request"></span></a></td>
+						</tr>
 						</tbody>
 					</table>
 				</div>
@@ -1207,5 +1456,21 @@
 		//ShowTimes(1);
 		setInterval('ShowTimes(1)',1000);
 	});
+
+	document.querySelector('#TableCategory').addEventListener('click', function() {
+		this.querySelector('.custom-select').classList.toggle('open');
+	})
+
+	for (const option of document.querySelectorAll(".custom-option")) {
+		option.addEventListener('click', function() {
+			if (!this.classList.contains('selected')) {
+				this.parentNode.querySelector('.custom-option.selected').classList.remove('selected');
+				this.classList.add('selected');
+				this.closest('.custom-select').querySelector('.custom-select__trigger span').textContent = this.textContent;
+			}
+			var val= this.getAttribute("data-value");
+			showTable(val);
+		})
+	}
 </script>
 </html>

@@ -35,6 +35,35 @@ $(document).ready( function () {
 		  { "width": "25px", "targets": 8 },
 		]
 	});
+
+	var p2Table = $('#dataTablePersonel2').DataTable({
+		responsive: {
+			details: {
+				renderer: function ( api, rowIdx, columns ) {
+					var data = $.map( columns, function ( col, i ) {
+						return col.hidden ?
+							'<tr data-dt-row="'+col.rowIndex+'" data-dt-column="'+col.columnIndex+'">'+
+							'<td>'+col.title+':'+'</td> '+
+							'<td>'+col.data+'</td>'+
+							'</tr>' :
+							'';
+					} ).join('');
+
+					return data ?
+						$('<table/>').append( data ) :
+						false;
+				},
+				type: 'none',
+				target: 'tr'
+			}
+		},
+		"language": {
+			"paginate": {
+				"previous": "Önceki",
+				"next": "Sonraki"
+			}
+		}
+	});
 	
 	var yTable = $('#dataTableYonetici').DataTable({
 		responsive: {
@@ -53,7 +82,7 @@ $(document).ready( function () {
 						$('<table/>').append( data ) :
 						false;
 				},
-				type: 'column',
+				type: 'none',
 				target: 'tr'
 			}
 		},
@@ -64,13 +93,17 @@ $(document).ready( function () {
 			}
 		},
 		"columnDefs": [
-		  { "width": "25px", "targets": 0 },
-		  { "width": "80px", "targets": 8 },
-		],
+			{ "width": "25px", "targets": 0 },
+			{ "width": "25px", "targets": 4 },
+			{ "width": "25px", "targets": 5 },
+			{ "width": "25px", "targets": 6 },
+			{ "width": "35px", "targets": 8 },
+		]
 	});
 
 	$('#tableSearch').keyup(function(){
 		pTable.search($(this).val()).draw();
+		p2Table.search($(this).val()).draw();
 		yTable.search($(this).val()).draw();
 	});
 
@@ -160,6 +193,42 @@ function showGrup(i) {
 		$('.grupEgitim_' + i).show(100);
 	} else {
 		$('.grupEgitim_' + i).hide(100);
+	}
+}
+
+function showTable(val) {
+
+	if(val == 0){
+		$("#kayitliEgitimler").css("display","block");
+		$("#tamamlanmasiGerekenEgitimler").css("display","none");
+	}else if(val == 1){
+		$("#kayitliEgitimler").css("display","none");
+		$("#tamamlanmasiGerekenEgitimler").css("display","block");
+	}
+}
+
+function showManagerTable(val) {
+	if(val == 0){
+		$("#dataTableYonetici").css("display","block");
+		$("#kayitliEgitimler").css("display","none");
+		$("#tamamlanmasiGerekenEgitimler").css("display","none");
+	}else if(val == 1){
+		$("#dataTableYonetici").css("display","none");
+		$("#kayitliEgitimler").css("display","block");
+		$("#tamamlanmasiGerekenEgitimler").css("display","none");
+	}else if(val == 2){
+		$("#dataTableYonetici").css("display","none");
+		$("#kayitliEgitimler").css("display","none");
+		$("#tamamlanmasiGerekenEgitimler").css("display","block");
+	}
+}
+
+function changeDate(i) {
+	var e = document.getElementById("changeDate_"+i);
+	var dateValue = e.options[e.selectedIndex].value;
+	var gE = document.getElementsByClassName("tgeGE_"+i);
+	for (i=0;i<gE.length;i++){
+		gE[i].cells[5].innerText = dateValue;
 	}
 }
 
