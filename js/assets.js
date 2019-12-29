@@ -209,15 +209,15 @@ function showTable(val) {
 
 function showManagerTable(val) {
 	if(val == 0){
-		$("#dataTableYonetici").css("display","block");
+		$("#onayBekleyenEgitimler").css("display","block");
 		$("#kayitliEgitimler").css("display","none");
 		$("#tamamlanmasiGerekenEgitimler").css("display","none");
 	}else if(val == 1){
-		$("#dataTableYonetici").css("display","none");
+		$("#onayBekleyenEgitimler").css("display","none");
 		$("#kayitliEgitimler").css("display","block");
 		$("#tamamlanmasiGerekenEgitimler").css("display","none");
 	}else if(val == 2){
-		$("#dataTableYonetici").css("display","none");
+		$("#onayBekleyenEgitimler").css("display","none");
 		$("#kayitliEgitimler").css("display","none");
 		$("#tamamlanmasiGerekenEgitimler").css("display","block");
 	}
