@@ -1,0 +1,254 @@
+ul.nav li{margin:0 15px;}
+ul.nav li a,ul.nav li a:hover{color: white;font-size:18px;text-decoration: none;font-family: FordAntenna-Medium;}
+ul.nav li ul{display: none;position:absolute;background: white;border:1px solid #f1f1f1;color:black;margin: 0;margin-left: -50px;padding: 10px 0;border-radius: 10px;z-index: 999 !important;}
+ul.nav li:hover ul{display: block;}
+ul.nav li ul:before { content: ''; height: 0; right: 45%; position: absolute; top: -8px; width: 0;border-left: 8px solid transparent;border-right: 8px solid transparent;border-bottom: 8px solid #fff; }
+ul.nav li ul li{list-style: none;float: none;margin:0;font-size: 13px;}
+ul.nav li ul li a,ul.nav li ul li a:hover{color:#002e6d;font-size: 13px;font-family: FordAntenna-Regular;border-bottom: 1px solid #f1f1f1;display: block;padding: 10px 0px;margin: 0 20px;}
+ul.nav li ul li:last-child a, ul.nav li ul li a:hover{border-bottom: 1px solid transparent;}
+ul.nav li ul li a span{font-size: 18px;margin-right: 5px;color: #2d96cd;}
+ul.nav li ul li a i{color:#2f97cd;}
+ul.nav li ul li:hover{background: #c0dff0;}
+ul.nav li ul li:hover a{color:#002e6d;}
+
+
+ul.notif{padding: 0;margin: 0;-ms-flex-align: center!important;align-items: center!important;display: flex;justify-content: center;}
+ul.notif li{list-style: none;float: left;margin: 0 10px;position: relative;}
+ul.notif li a span.icon-icon-natification,ul.notif li a span.icon-icon-guide{font-size: 26px;color: #2d96cd;}
+ul.notif li a:hover{text-decoration: none;}
+ul.notif li:last-child{margin-right: 0;}
+ul.notif li.lang a{font-size:12px;background: #2d97ce;color:white;border-radius: 5px;padding: 2px 4px;font-weight: 500;text-decoration: none;}
+ul.notif li ul{display: none;position:absolute;background: white;color:black;margin: 0;margin-left: -50px;padding: 10px 0;border-radius: 10px;z-index: 999 !important;}
+ul.notif li:hover ul{display: block;}
+ul.notif li ul li{list-style: none;float: none;margin:0;font-size: 13px;}
+ul.notif li ul li.cikisButonu{padding: 15px 10px;}
+ul.notif li ul li a,ul.notif li ul li a:hover{color:#002e6d;font-size: 13px;font-family: FordAntenna-Regular;border-bottom: 1px solid #f1f1f1;display: block;padding: 10px 0px;margin: 0 20px;}
+ul.notif li ul li:last-child a, ul.notif li ul li a:hover{border-bottom: 1px solid transparent;}
+ul.notif li ul li a span{font-size: 18px;margin-right: 5px;color: #2d96cd;}
+ul.notif li ul li a i{color:#2f97cd;}
+ul.notif li ul li:hover{background: #c0dff0;}
+ul.notif li ul li:hover a{color:#002e6d;}
+ul.notif li ul li.cikisButonu:hover{background: #e42c3b;}
+ul.notif li ul li.cikisButonu:hover a{color:white;}
+ul.notif li ul li.cikisButonu:hover a span{color: white;}
+.userArea{line-height: 10px;}
+ul.notif li ul.userSubmenu{right: -20px;}
+ul.notif li ul.userSubmenu:before { content: ''; height: 0; right: 30px; position: absolute; top: -8px; width: 0;border-left: 8px solid transparent;border-right: 8px solid transparent;border-bottom: 8px solid #fff; }
+
+ul.notif li.lang ul{width:120px;right: 0px;}
+ul.notif li.lang ul:before { content: ''; height: 0; right: 10px; position: absolute; top: -8px; width: 0;border-left: 8px solid transparent;border-right: 8px solid transparent;border-bottom: 8px solid #fff; }
+ul.notif li.lang ul li a span{margin-right: 0;}
+ul.notif li.lang ul li a{background: none;color:#002e6d;}
+ul.notif li.lang ul li a,ul.notif li.lang ul li a:hover{color:#002e6d;font-size: 13px;font-family: FordAntenna-Regular;border-bottom: 1px solid #f1f1f1;display: block;padding: 10px 0px;margin: 0 20px;}
+ul.notif li.lang ul li:last-child a, ul.notif li.lang ul li a:hover{border-bottom: 1px solid transparent;}
+ul.notif li.natificationSubMenu div.natificationList{display: none;background: white;position: absolute;width: 300px;margin-left: -130px;border-radius: 10px;border:1px solid #f1f1f1;}
+ul.notif li.natificationSubMenu div.natificationList:before { content: ''; height: 0; right: 50%; position: absolute; top: -8px; width: 0;border-left: 8px solid transparent;border-right: 8px solid transparent;border-bottom: 8px solid #fff; }
+ul.notif li.natificationSubMenu:hover div.natificationList{display: block;}
+.footerTitle{font-size: 18px;color: white;margin-bottom: 20px;font-family: FordAntenna-Medium;font-weight:normal;}
+ul.footerMenu{margin: 0;padding: 0;}
+ul.footerMenu li {list-style: none;}
+ul.footerMenu li a{color: white;font-size: 14px;}
+table tbody tr:hover{
+	cursor: pointer;
+	background: #d4eaf5;
+}
+ul.controlButton{padding:0;margin:0;float:right;}
+ul.controlButton li{list-style:none;padding:0 3px;float:left;}
+ul.controlButton li a .icon-icon-table-calendar::before{
+	display: inline-block;
+    background: #ff9500;
+    color: white;
+    padding: 6px;
+    font-size: 10px;
+    border-radius: 5px;
+}
+ul.controlButton li a .icon-icon-table-okay::before{    
+display: inline-block;
+    background: #00b600;
+    color: white;
+    padding: 6px;
+    font-size: 10px;
+    border-radius: 5px;
+}
+ul.controlButton li a .icon-icon-table-decline::before{
+	display: inline-block;
+    background: #e42c3b;
+    color: white;
+    padding: 6px;
+    font-size: 10px;
+    border-radius: 5px;
+}
+ul.infoText{margin: 0;padding: 0;float: right;margin-top: 5px;}
+ul.infoText li{list-style: none;font-size: 9px;color: #2d96cd;}
+ul.infoText li:before{
+	content: '';
+    width: 10px;
+    height: 10px;
+    background: #2d96cd;
+    display: inline-block;
+    border-radius: 50%;
+    margin-bottom: -2px;
+    margin-right: 3px;
+}
+
+.notification-link{
+    padding: 0 15px;
+    line-height: 70px;
+    color: #495057;
+    max-height: 70px;
+}
+.menu-toggle,.mobilmenu-close {
+    float: right;
+    line-height: 25px;
+    display: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: #2d96cd;
+}
+.mobilMenu {
+    display: none;
+    font-family: FordAntenna-Medium;
+    background-color: #002e6df2;
+    width: 100%;
+    right: auto;
+    left: 0;
+    -webkit-transform: translate3d(-100%,0,0);
+    transform: translate3d(-100%,0,0);
+    position: fixed;
+    top: 45px;
+    left: 0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: none;
+    transition: none;
+    will-change: transform;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    -webkit-overflow-scrolling: touch;
+    height: 100%!important;
+    max-height: 100%;
+    border-radius: 0!important;
+    margin: 0!important;
+    overflow-y: auto!important;
+    z-index: 20;
+    padding: 15px;
+}
+
+.show {
+    display: block!important;
+}
+
+.minus {
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+    margin-right: 20px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    width: 20px;
+    float: right;
+}
+
+@media (max-width: 1024px) {
+    .mobilMenu {
+        display: none;
+        font-family: FordAntenna-Medium;
+        background-color: #002e6df2;
+        width: 30%;
+        right: 0;
+        left: auto;
+        -webkit-transform: translate3d(-100%,0,0);
+        transform: translate3d(-100%,0,0);
+        position: fixed;
+        top: 130px;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-transition: none;
+        transition: none;
+        will-change: transform;
+        -webkit-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        -webkit-overflow-scrolling: touch;
+        height: 100%!important;
+        max-height: 100%;
+        border-radius: 0!important;
+        margin: 0!important;
+        overflow-y: auto!important;
+        z-index: 20;
+        padding: 15px;
+    }
+    .menu-toggle,.mobilmenu-close {
+        display: block;
+    }
+    ul.notif li a span.icon-icon-natification, ul.notif li a span.icon-icon-guide{
+        font-size: 20px;
+    }
+    ul.notif{float: right;margin-top: 5px;}
+    .mobilMenu .duyuru_box {
+        height: 40px;
+        background-color: unset;
+        border-bottom: 1px solid #ffffff20;
+    }
+    .duyuru_baslik {
+        font-size: 16px;
+        font-weight: unset;
+        margin-left: 10px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 75%;
+        color: white;
+    }
+    .mobilMenu .minus {
+        height: 40px;
+        line-height: 40px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+    }
+    .minus .icon-icon-table-dropdown::before{color: #2d96cd;}
+    .userArea{padding: 10px 10px;}
+    .userImgArea{margin-left: 0;float: left;}
+    .userInfoArea{float: none;text-align: left;margin-left: 10px;}
+    .minus span{font-size: 14px;}
+    .mobilMenu .submenu{padding: 15px;}
+    .mobilMenu .submenu li{list-style: none;border-bottom: 1px solid white;padding: 5px 7px;}
+    .mobilMenu .submenu li a{color: white;font-size: 13px;font-family: FordAntenna-Regular;}
+    .mobilMenu .submenu li a span{margin-right: 5px;}
+    .mobilMenu .submenu.langMenu li a span{margin-right: 0px;}
+    .mobilMenu .submenu.langMenu li a .icon-icon-lang-turkish,.mobilMenu .submenu.langMenu li a .icon-icon-lang-english,.mobilMenu .submenu.langMenu li a .icon-icon-lang-francais,.mobilMenu .submenu.langMenu li a .icon-icon-lang-deutsch,.mobilMenu .submenu.langMenu li a .icon-icon-lang-russian{margin-right: 5px;}
+}
+@media (max-width: 400px) {
+    .mobilMenu {
+        display: none;
+        font-family: FordAntenna-Medium;
+        background-color: #002e6df2;
+        width: 100%;
+        right: 0;
+        left: auto;
+        -webkit-transform: translate3d(-100%,0,0);
+        transform: translate3d(-100%,0,0);
+        position: fixed;
+        top: 45px;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-transition: none;
+        transition: none;
+        will-change: transform;
+        -webkit-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        -webkit-overflow-scrolling: touch;
+        height: 100%!important;
+        max-height: 100%;
+        border-radius: 0!important;
+        margin: 0!important;
+        overflow-y: auto!important;
+        z-index: 20;
+        padding: 15px;
+    }
+}
