@@ -169,6 +169,7 @@ ul.notif li ul li.cikisButonu:hover a span {
 ul.notif li ul.userSubmenu {
   right: -20px;
   margin-top: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 ul.notif li ul.userSubmenu:before {
   content: "";
